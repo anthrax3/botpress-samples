@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "id": "v_q4vdBrin_JsaboTLdkq",
+      "position": {
+        "x": 100,
+        "y": 85
+      }
+    },
+    {
+      "id": "skill-C7TnT",
+      "position": {
+        "x": 336,
+        "y": 298
+      }
+    },
+    {
+      "id": "UcC4ZHSdFeSFMtSHljB_E",
+      "position": {
+        "x": 650,
+        "y": 210
+      }
+    },
+    {
+      "id": "HsnNMespq0QLu8OG4QBFX",
+      "position": {
+        "x": 655,
+        "y": 470
+      }
+    },
+    {
+      "id": "Hv52Oci9C7Sijw8xDP~i~",
+      "position": {
+        "x": 950,
+        "y": 225
+      }
+    },
+    {
+      "id": "mBptwWjiVVa~ZS6SnQ0oU",
+      "position": {
+        "x": 954,
+        "y": 407
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "v_q4vdBrin_JsaboTLdkq",
+      "sourcePort": "out0",
+      "target": "skill-C7TnT",
+      "points": [
+        {
+          "x": 306.5,
+          "y": 198.5
+        },
+        {
+          "x": 436,
+          "y": 291.5
+        }
+      ]
+    },
+    {
+      "source": "skill-C7TnT",
+      "sourcePort": "out0",
+      "target": "UcC4ZHSdFeSFMtSHljB_E",
+      "points": [
+        {
+          "x": 542.5,
+          "y": 346.5
+        },
+        {
+          "x": 750,
+          "y": 203.5
+        }
+      ]
+    },
+    {
+      "source": "skill-C7TnT",
+      "sourcePort": "out1",
+      "target": "HsnNMespq0QLu8OG4QBFX",
+      "points": [
+        {
+          "x": 542.5,
+          "y": 371.5
+        },
+        {
+          "x": 755,
+          "y": 463.5
+        }
+      ]
+    },
+    {
+      "source": "skill-C7TnT",
+      "sourcePort": "out2",
+      "target": "HsnNMespq0QLu8OG4QBFX",
+      "points": [
+        {
+          "x": 542.5,
+          "y": 396.5
+        },
+        {
+          "x": 755,
+          "y": 463.5
+        }
+      ]
+    },
+    {
+      "source": "UcC4ZHSdFeSFMtSHljB_E",
+      "sourcePort": "out0",
+      "target": "Hv52Oci9C7Sijw8xDP~i~",
+      "points": [
+        {
+          "x": 856.5,
+          "y": 311.5
+        },
+        {
+          "x": 1050,
+          "y": 218.5
+        }
+      ]
+    },
+    {
+      "source": "UcC4ZHSdFeSFMtSHljB_E",
+      "sourcePort": "out1",
+      "target": "mBptwWjiVVa~ZS6SnQ0oU",
+      "points": [
+        {
+          "x": 856.5,
+          "y": 336.5
+        },
+        {
+          "x": 1054,
+          "y": 400.5
+        }
+      ]
+    }
+  ]
+}

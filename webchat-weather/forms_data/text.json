@@ -1,0 +1,50 @@
+[
+  {
+    "id": "text-b9f14e",
+    "formData": {
+      "text": "Hello, {{user.first_name}}! My name is Wetter. I am in charge of the the Weather here 🌤 !"
+    },
+    "createdBy": "admin",
+    "createdOn": "2017-12-19T02:28:25.502Z"
+  },
+  {
+    "id": "text-37bfb1",
+    "formData": {
+      "text": "OK then, goodbye ☹"
+    },
+    "createdBy": "admin",
+    "createdOn": "2017-12-19T02:34:13.606Z"
+  },
+  {
+    "id": "text-e66283",
+    "formData": {
+      "text": "What is your current city?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2017-12-19T02:34:53.253Z"
+  },
+  {
+    "id": "text-b7885c",
+    "formData": {
+      "text": "Hrm, that doesn't look like a city 🏦"
+    },
+    "createdBy": "admin",
+    "createdOn": "2017-12-19T02:38:20.809Z"
+  },
+  {
+    "id": "text-7b486b",
+    "formData": {
+      "text": "It is currently {{state.temperature}} in {{state.city}} city. Enjoy! 🌤"
+    },
+    "createdBy": "admin",
+    "createdOn": "2017-12-19T02:39:37.509Z"
+  },
+  {
+    "id": "text-eab7b2",
+    "formData": {
+      "text": "What is your current city? 🏦"
+    },
+    "createdBy": "admin",
+    "createdOn": "2017-12-19T03:19:16.815Z"
+  }
+]

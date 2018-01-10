@@ -1,0 +1,99 @@
+{
+  "version": "0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "v_q4vdBrin_JsaboTLdkq",
+      "name": "entry",
+      "onEnter": [
+        "say #!text-b9f14e"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-C7TnT"
+        }
+      ]
+    },
+    {
+      "id": "skill-C7TnT",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-C7TnT",
+      "flow": "skills/choice-C7TnT.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Yes! ☀️]",
+          "condition": "state['skill-choice-ret'] == \"Yes! ☀️\"",
+          "node": "node-YQor"
+        },
+        {
+          "caption": "User picked [Nope]",
+          "condition": "state['skill-choice-ret'] == \"Nope\"",
+          "node": "node-MQkR"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "node-MQkR"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "UcC4ZHSdFeSFMtSHljB_E",
+      "name": "node-YQor",
+      "next": [
+        {
+          "condition": "state.validCity === true",
+          "node": "node-jyOM"
+        },
+        {
+          "condition": "true",
+          "node": "node-QiXo"
+        }
+      ],
+      "onEnter": [
+        "say #!text-eab7b2"
+      ],
+      "onReceive": [
+        "parseCity {}"
+      ]
+    },
+    {
+      "id": "HsnNMespq0QLu8OG4QBFX",
+      "name": "node-MQkR",
+      "next": [],
+      "onEnter": [
+        "say #!text-37bfb1"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "Hv52Oci9C7Sijw8xDP~i~",
+      "name": "node-jyOM",
+      "next": [],
+      "onEnter": [
+        "say #!text-7b486b"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "mBptwWjiVVa~ZS6SnQ0oU",
+      "name": "node-QiXo",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!text-b7885c"
+      ],
+      "onReceive": null
+    }
+  ]
+}

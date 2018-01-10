@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "startNode": "entry",
+  "skillData": {
+    "choices": [
+      {
+        "value": "Yes! ☀️",
+        "keywords": [
+          "yes! ☀️",
+          "yes",
+          "yeah",
+          "please",
+          "sure"
+        ]
+      },
+      {
+        "value": "Nope",
+        "keywords": [
+          "nope",
+          "no",
+          "no thanks",
+          "i don't"
+        ]
+      }
+    ],
+    "question": "Would you like to know the weather?",
+    "maxRetries": "2",
+    "invalid": "Invalid choice, please pick one of the following:",
+    "questionBloc": "#choice",
+    "invalidBloc": "#choice"
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #choice {\"choices\":[{\"text\":\"Yes! ☀️\",\"payload\":\"CHOICE_PICK_Yes! ☀️\"},{\"text\":\"Nope\",\"payload\":\"CHOICE_PICK_Nope\"}],\"question\":\"Would you like to know the weather?\",\"maxRetries\":\"2\",\"invalid\":\"Invalid choice, please pick one of the following:\",\"questionBloc\":\"#choice\",\"invalidBloc\":\"#choice\",\"text\":\"Would you like to know the weather?\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "981573",
+      "onReceive": null
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "skill-choice-parse {\"choices\":[{\"value\":\"Yes! ☀️\",\"keywords\":[\"yes! ☀️\",\"yes\",\"yeah\",\"please\",\"sure\"]},{\"value\":\"Nope\",\"keywords\":[\"nope\",\"no\",\"no thanks\",\"i don't\"]}],\"question\":\"Would you like to know the weather?\",\"maxRetries\":\"2\",\"invalid\":\"Invalid choice, please pick one of the following:\",\"questionBloc\":\"#choice\",\"invalidBloc\":\"#choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "state['skill-choice-valid'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "id": "229601",
+      "onEnter": []
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "skill-choice-invalid-inc"
+      ],
+      "next": [
+        {
+          "condition": "state['skill-choice-invalid-count'] <= 2",
+          "node": "sorry"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "041377",
+      "onReceive": null
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #choice {\"choices\":[{\"text\":\"Yes! ☀️\",\"payload\":\"CHOICE_PICK_Yes! ☀️\"},{\"text\":\"Nope\",\"payload\":\"CHOICE_PICK_Nope\"}],\"question\":\"Would you like to know the weather?\",\"maxRetries\":\"2\",\"invalid\":\"Invalid choice, please pick one of the following:\",\"questionBloc\":\"#choice\",\"invalidBloc\":\"#choice\",\"text\":\"Invalid choice, please pick one of the following:\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "846457",
+      "onReceive": null
+    }
+  ]
+}

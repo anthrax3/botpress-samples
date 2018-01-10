@@ -1,0 +1,21 @@
+{
+  "name": "weather",
+  "version": "0.0.1",
+  "description": "Demo bot",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "botpress": "1.x",
+    "botpress-analytics": "^2.2.7",
+    "botpress-api.ai": "^2.1.7",
+    "botpress-platform-webchat": "^0.4.4",
+    "botpress-skill-choice": "/Users/slvn/bots/modules/botpress-skill-choice",
+    "lodash": "^4.17.4"
+  },
+  "scripts": {
+    "start": "botpress start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Botpress Inc",
+  "license": "Botpress Proprietary License"
+}
