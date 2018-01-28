@@ -9,7 +9,7 @@
     "botpress-analytics": "^2.2.7",
     "botpress-api.ai": "^2.1.7",
     "botpress-platform-webchat": "^0.4.4",
-    "botpress-skill-choice": "/Users/slvn/bots/modules/botpress-skill-choice",
+    "botpress-skill-choice": "./botpress-skill-choice-1.0.0-beta.1.tgz",
     "lodash": "^4.17.4"
   },
   "scripts": {

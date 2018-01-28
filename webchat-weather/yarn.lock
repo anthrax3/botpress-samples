@@ -545,6 +545,10 @@ botpress-platform-webchat@^0.4.4:
     sillyname "^0.1.0"
     uuid "^3.1.0"
 
+botpress-skill-choice@./botpress-skill-choice-1.0.0-beta.1.tgz:
+  version "1.0.0-beta.1"
+  resolved "./botpress-skill-choice-1.0.0-beta.1.tgz#197c22ba70cbb0fb653b7132b5282912b2b4fed3"
+
 "botpress-skill-choice@file:../../modules/botpress-skill-choice":
   version "1.0.0-beta.1"
 
