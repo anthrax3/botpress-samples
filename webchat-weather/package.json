@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.17.1",
-    "botpress": "1.x",
+    "botpress": "^2.0.0-beta.13",
     "botpress-analytics": "^2.2.7",
     "botpress-api.ai": "^2.1.7",
     "botpress-platform-webchat": "^0.4.4",

@@ -1,5 +1,4 @@
 module.exports = {
-
   /*
     Where the content is stored
     You can access this property from `bp.dataLocation`
@@ -17,12 +16,42 @@ module.exports = {
   modulesConfigDir: process.env.BOTPRESS_CONFIG_DIR || './modules_config',
 
   /*
+    Path to Content Forms
+   */
+  formsDir: './forms',
+
+  /*
+    Path to Flows
+   */
+  flowsDir: './flows',
+
+  /*
+    Path to Content Forms Data
+   */
+  formsDataDir: './forms_data',
+
+  /*
     By default logs are enabled and available in `dataDir`
    */
   disableFileLogs: false,
   log: {
     file: 'bot.log',
     maxSize: 1e6 // 1mb
+  },
+
+  /*
+    The web server API config
+   */
+  api: {
+    bodyMaxSize: '1mb'
+  },
+
+  /*
+    Dialog Manager (DM)
+  */
+  dialogs: {
+    timeoutInterval: '15m',
+    janitorInterval: '10s'
   },
 
   /*
@@ -37,6 +66,13 @@ module.exports = {
   notification: {
     file: 'notifications.json',
     maxLength: 50
+  },
+
+  /*
+    By default ghost content management is only activated in production
+   */
+  ghostContent: {
+    enabled: process.env.NODE_ENV === 'production' || process.env.BOTPRESS_GHOST_ENABLED
   },
 
   /*
@@ -63,14 +99,6 @@ module.exports = {
     password: process.env.PG_PASSWORD || '',
     database: process.env.PG_DB || '',
     ssl: process.env.PG_SSL || false
-  },
-
-  umm: {
-    /*
-      The file containing the UMM Content (Universal Message Markdown)
-      Can be an absolute or relative path (to your bot location)
-    */
-    contentPath: 'content.yml'
   },
 
   middleware: {
